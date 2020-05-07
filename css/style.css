@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(229, 6%, 95%);
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    margin-top: 70px;
+}
+
+section {
+    display: flex;
+    margin: 40px 0;
+
+}
+
+section>div {
+    display: flex;
+    flex: 1;
+    margin-right: 30px;
+}
+
+section div:nth-of-type(2) {
+    flex-direction: column;
+    justify-content: center;
+}
+
+section div:nth-of-type(2) article {
+    margin-top: 30px;
+}
+
+section div:first-child,
+section div:last-child {
+    align-items: center;
+}
+
+article {
+    height: 200px;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    -webkit-box-shadow: 5px 5px 16px -3px rgba(135, 135, 135, 1);
+    -moz-box-shadow: 5px 5px 16px -3px rgba(135, 135, 135, 1);
+    box-shadow: 5px 5px 16px -3px rgba(135, 135, 135, 1);
+    transition: box-shadow .4s;
+}
+
+article:hover {
+    box-shadow: 5px 5px 26px -3px rgba(135, 135, 135, 1);
+}
+
+article div {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+section article {
+    background-color: hsl(0, 0%, 98%);
+}
+
+#red {
+    border-top: 3px solid hsl(0, 78%, 62%);
+}
+
+#cyan {
+    border-top: 3px solid hsl(180, 62%, 55%);
+}
+
+#orange {
+    border-top: 3px solid hsl(34, 97%, 64%);
+}
+
+#blue {
+    border-top: 3px solid hsl(212, 86%, 64%);
+}
+
+h1, h2, h3, p {
+    color: hsl(0, 0%, 30%);
+}
+
+h1 {
+    font-weight: 200;
+}
+
+h3 {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+h2 {
+    font-weight: 400;
+}
+
+p {
+    font-size: 0.9em;
+    font-weight: 200;
+}
+
+
+/* Mobile */
+
+@media screen and (max-width: 930px) {
+    main {
+        width: 90%;
+    }
+
+    section {
+        flex-direction: column;
+    }
+
+    section div {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    section div:first-child {
+        margin-bottom: 0;
+    }
+
+    section article {
+        width: 100%;
+    }
+}
